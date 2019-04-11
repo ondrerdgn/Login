@@ -9,31 +9,31 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    TextView email,password;
+    TextView user,passwrd;
     Button enter,clear; //onclick metodu çağrılırsa kullanılabilir
 
-//RRRRRRRRRRRRRRRRRRRRRRRRRR
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        email = findViewById(R.id.email);
-        password = findViewById(R.id.password);
-        //enter = findViewById(R.id.enter);
-        //clear = findViewById(R.id.clear);
+        user = findViewById(R.id.userName);
+        passwrd = findViewById(R.id.password);
+        enter = findViewById(R.id.login);    //onClick metodunda kullanılmıyor
+        clear = findViewById(R.id.clearAll); //onClick metodunda kullanılmıyor
 
 
 
     }
-        // bir view tarafından çağrılırsa
+        // switch case alternatifi.
 
-    public void enter(View view){
+
+    public void clickButton(View view){ // bu yöntemde Onclick isimleri aynı olmalı!!
         switch (view.getId()){
-            case R.id.enter:
+            case R.id.login:
 
-                if (email.getText().toString().equals("legend") && password.getText().toString()
+                if (user.getText().toString().equals("legend") && passwrd.getText().toString()
                         .equals("1234")){
 
                     Toast.makeText(this, "entry success!", Toast.LENGTH_SHORT).show();
@@ -41,16 +41,13 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     Toast.makeText(this, "please try again", Toast.LENGTH_SHORT).show();
                 }
-
                 break;
 
 
-            case R.id.clear:
+            case R.id.clearAll:
 
-                email.setText("");
-                password.setText("");
-
-
+                user.setText("");
+                passwrd.setText("");
                 break;
         }
     }
@@ -58,12 +55,12 @@ public class MainActivity extends AppCompatActivity {
 
 }
 
-        // switch case alternatifi.
+        // bir view tarafından çağrılırsa
 
 
     /*public void enter(View view){
 
-        if (email.getText().toString().equals("onder") && password.getText().toString()
+        if (user.getText().toString().equals("onder") && password.getText().toString()
                 .equals("1234")){
 
             Toast.makeText(this, "entry success!", Toast.LENGTH_SHORT).show();
@@ -75,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clear(View view){
-        email.setText("");
+        user.setText("");
         password.setText("");
         //password.requestFocus();
     }*/
