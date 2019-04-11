@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     TextView email,password;
     Button enter,clear; //onclick metodu çağrılırsa kullanılabilir
 
-
+//RRRRRRRRRRRRRRRRRRRRRRRRRR
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
