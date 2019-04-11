@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         enter = findViewById(R.id.login);    //onClick metodunda kullanılmıyor
         clear = findViewById(R.id.clearAll); //onClick metodunda kullanılmıyor
 
-
+//rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
 
     }
         // switch case alternatifi.
